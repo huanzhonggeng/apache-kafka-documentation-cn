@@ -45,7 +45,7 @@
 * MessageFormatter的包从`kafka.tools`变更为`kafka.common`
 * MessageReader的包`kafka.tools`变更为`kafka.common`
 * MirrorMakerMessageHandler不再暴露`handle(record: MessageAndMetadata[Array[Byte], Array[Byte]])`方法，因为它从没有被调用过.
-* 0.7 KafkaMigrationTool不再和Kafka打包。如果你需要从0.8迁移到0.10.0，请先迁移到0.8然后在根据文档升级过程完成从0.8到0.10.0的升级。
+* 0.7 KafkaMigrationTool不再和Kafka打包。如果你需要从0.7迁移到0.10.0，请先迁移到0.8然后在根据文档升级过程完成从0.8到0.10.0的升级。
 * 新的消费者规范化了API来使用`java.util.Collection`作为序列类型方法参数。现存的代码可能需要进行修改来实现0.10.0版本客户端库的协作。
 * LZ4压缩消息的处理变更为使用互操作框架规范（LZ4f v1.5.1）（interoperable framing specification）。为了保证对老客户端的兼容，这个变更只应用于0.10.0或之后版本的消息格式上。v0/v1 (消息格式 0.9.0)生产或者拉取LZ4压缩消息的客户端将依旧使用0.9.0的框架实现。使用Produce/Fetch protocols v2协议的客户端及之后客户端应该使用互操作LZ4f框架。互操作（interoperable）LZ4类库列表可以在这里找到http://www.lz4.org/
 
