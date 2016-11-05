@@ -13,7 +13,7 @@
 1. 更新所有中间件的server.properties文件，添加如下配置：
   * inter.broker.protocol.version=CURRENT_KAFKA_VERSION (e.g. 0.8.2 or 0.9.0.0).
   * log.message.format.version=CURRENT_KAFKA_VERSION (参考 [**升级过程可能的性能影响**](#upgrade_10_performance_impact)了解这个配置项的作用)
-2. 升级中间件。这个过程可以逐个中间件的去完成，只要将它下线然后升级代码然后重启即可。
+2. 升级服务端brokers。这个过程可以逐个中间件的去完成，只要将它下线然后升级代码然后重启即可。
 3. 当整个集群都升级完成以后，再去处理协议版本问题，通过编辑inter.broker.protocol.version并设置为0.10.0.0即可。注意：此时还不应该去修改日志格式版本参数log.message.format.version-这参数只能在所有的客户端都升级到0.10.0.0之后去修改。
 4. 逐个重启中间件让新的协议版本生效。
 5. 当所有的消费者都升级到0.10.0以后，逐个中间件去修改log.message.format.version为0.10.0并重启。
