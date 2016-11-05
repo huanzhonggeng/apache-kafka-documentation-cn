@@ -276,7 +276,6 @@ KTable wordCounts = textLines
 > echo -e "all streams lead to kafka\nhello kafka streams\njoin kafka summit" > file-input.txt
 
 ```
-ing\):
 
 接下来我们使用终端生产者发送这些输入数据到名为**streams-file-input**的输入topic（在实际应用中，流数据会是不断流入处理程序启动和运行用的Kafka）：
 
