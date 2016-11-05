@@ -1,6 +1,6 @@
 ## [4. 设计](#design)<a id="design"></a>
 
-### [4.1 Motivation](#majordesignelements)<a id="majordesignelements"></a>
+### [4.1 动机](#majordesignelements)<a id="majordesignelements"></a>
 
 We designed Kafka to be able to act as a unified platform for handling all the real-time data feeds **[a large company might have](http://kafka.apache.org/documentation.html#introduction)**. To do this we had to think through a fairly broad set of use cases.
 
