@@ -252,7 +252,7 @@ connector在持续的处理着数据，所以我们可以向文件中添加数�
 
 你应该可以观察到新的数据行出现在终端消费者中和输出文件中。
 
-#### [Step 8: 使用Kafka Streams来处理数据 Use Kafka Streams to process data](#quickstart_kafkastreams)<a id="quickstart_kafkastreams"></a>
+#### [Step 8: 使用Kafka Streams来处理数据](#quickstart_kafkastreams)<a id="quickstart_kafkastreams"></a>
 
 Kafka Streams是一个用来对Kafka brokers中保存的数据进行实时处理和分析的客户端库。这个入门示例将演示如何启动一个采用此类库实现的流处理程序。下面是`WordCountDemo`示例代码的GIST（为了方便阅读已经转化成了Java 8的lambda表达式）。
 
