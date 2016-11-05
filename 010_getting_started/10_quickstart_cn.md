@@ -258,8 +258,7 @@ Kafka Streams是一个用来对Kafka brokers中保存的数据进行实时处理
 
 ```
 KTable wordCounts = textLines
-    // 按照空格将每个文本行拆分成单词
-    // Split each text line, by whitespace, into words.
+    // 按照空格将每个文本行拆分成单词    
     .flatMapValues(value -> Arrays.asList(value.toLowerCase().split("\\W+")))
     // 确保每个单词作为记录的key值以便于下一步的聚合
     // Ensure the words are available as record keys for the next aggregate operation.
