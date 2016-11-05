@@ -79,7 +79,7 @@
 * 不再支持Java 1.6。
 * 不再支持Scala 2.9。
 * 1000以上的Broker ID被默认保留用于自动分配broker id。如果你的集群现在有broker id大于此数值应该注意修改reserved.broker.max.id配置。
-* 配置参数replica.lag.max.messages was removed。分区领导判定副本是否同步不再考虑延迟的消息。
+* 配置参数replica.lag.max.messages被删除了。分区领导判定副本是否同步不再考虑延迟的消息。
 * 配置参数replica.lag.time.max.ms现在不仅仅代表自副本最后拉取请求到现在的时间间隔，它也是副本最后完成同步的时间。副本正在从leader拉取消息，但是在replica.lag.time.max.ms时间内还没有完成最后一条信息的拉取，它也将被认为不再是同步状态。
 * 压缩话题（Compacted topics）不再接受没有key的消息，如果消费者尝试将抛出一个异常。在0.8.x版本，一个不包含key的消息会引起日志压缩线程（log compaction thread）异常并退出（造成所有压缩话题的压缩工作中断）。
 * MirrorMaker不再支持多个目标集群。这意味着它能只能接受一个--consumer.config参数配置。为了镜像多个源集群，你至少要为每个源集群配置一个MirrorMaker实例，每个实例配置他们的消费者信息。
