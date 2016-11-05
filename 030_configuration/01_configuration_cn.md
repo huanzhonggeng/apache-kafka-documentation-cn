@@ -356,7 +356,7 @@ Since 0.9.0.0 we have been working on a replacement for our existing simple and 
 | ssl.keymanager.algorithm | The algorithm used by key manager factory for SSL connections. Default value is the key manager factory algorithm configured for the Java Virtual Machine. | string | SunX509 |  | low |
 | ssl.trustmanager.algorithm | The algorithm used by trust manager factory for SSL connections. Default value is the trust manager factory algorithm configured for the Java Virtual Machine. | string | PKIX |  | low |
 
-### [3.4 Kafka Connect Configs](#connectconfigs)<a id="connectconfigs"></a>
+### [3.4 Kafka Connect配置](#connectconfigs)<a id="connectconfigs"></a>
 
 Below is the configuration of the Kafka Connect framework.
 
