@@ -100,7 +100,6 @@
 
 * 通过kafka-topics.sh脚本修改topic信息已经弃用。今后请使用kafka-configs.sh完成此功能。
 * kafka-consumer-offset-checker.sh（kafka.tools.ConsumerOffsetChecker）已经弃用。今后请用kafka-consumer-groups.sh完成此功能。
-* The kafka.tools.ProducerPerformance class has been deprecated. Going forward, please use org.apache.kafka.tools.ProducerPerformance for this functionality \(kafka-producer-perf-test.sh will also be changed to use the new class\).
 * kafka.tools.ProducerPerformance类已经弃用。今后使用org.apache.kafka.tools.ProducerPerformance完成此功能(kafka-producer-perf-test.sh也将变更为使用新的类)。
 * 生产者配置block.on.buffer.full已经被弃用并在后续版本中移除。当前它的默认值已经被修改为false。Kafka生产者不再抛出BufferExhaustedException取而代之使用max.block.ms来阻塞，在阻塞超时以后将抛出TimeoutException。如果block.on.buffer.full属性被明确配置为true，它将设置max.block.ms为Long最大值（Long.MAX_VALUE）并且metadata.fetch.timeout.ms配置将不再被参考。
 #### [从0.8.1升级到0.8.2](#upgrade_82)<a id="upgrade_82"></a>
