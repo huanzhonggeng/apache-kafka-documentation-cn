@@ -48,7 +48,7 @@ Topic级别的配置和默认值在[下面](http://kafka.apache.org/documentatio
 | min.insync.replicas | define the minimum number of replicas in ISR needed to satisfy a produce request with acks=all \(or -1\) | int | 1 | \[1,...\] | high |
 | num.io.threads | The number of io threads that the server uses for carrying out network requests 服务器用语搬运网络数据请求的线程数| int | 8 | \[1,...\] | high |
 | num.network.threads | the number of network threads that the server uses for handling network requests 服务器用于处理网络请求的线程数| int | 3 | \[1,...\] | high |
-| num.recovery.threads.per.data.dir | The number of threads per data directory to be used for log recovery at startup and flushing at shutdown | int | 1 | \[1,...\] | high |
+| num.recovery.threads.per.data.dir | The number of threads per data directory to be used for log recovery at startup and flushing at shutdown 系统启动和系统关闭前每个目录用于恢复数据的线程数| int | 1 | \[1,...\] | high |
 | num.replica.fetchers | Number of fetcher threads used to replicate messages from a source broker. Increasing this value can increase the degree of I\/O parallelism in the follower broker. | int | 1 |  | high |
 | offset.metadata.max.bytes | The maximum size for a metadata entry associated with an offset commit | int | 4096 |  | high |
 | offsets.commit.required.acks | The required acks before the commit can be accepted. In general, the default \(-1\) should not be overridden | short | -1 |  | high |
