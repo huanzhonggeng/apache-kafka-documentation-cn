@@ -260,11 +260,9 @@ Kafka Streams是一个用来对Kafka brokers中保存的数据进行实时处理
 KTable wordCounts = textLines
     // 按照空格将每个文本行拆分成单词    
     .flatMapValues(value -> Arrays.asList(value.toLowerCase().split("\\W+")))
-    // 确保每个单词作为记录的key值以便于下一步的聚合
-    // Ensure the words are available as record keys for the next aggregate operation.
+    // 确保每个单词作为记录的key值以便于下一步的聚合    
     .map((key, value) -> new KeyValue<>(value, value))
     // 计算每个单词的出现频率并将他们保存到“Counts”的表中
-    // Count the occurrences of each word (record key) and store the results into a table named "Counts".
     .countByKey("Counts")
 
 ```
