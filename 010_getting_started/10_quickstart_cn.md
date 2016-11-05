@@ -185,7 +185,7 @@ my test message 2
 
 ```
 
-leader已经切换到一个从服务器上，node 1节点也不在出现在同步副本列表中了：
+leader已经切换到一个从服务器上，node 1节点也不再出现在同步副本列表中了：
 
 ```bash
 > bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic my-replicated-topic
