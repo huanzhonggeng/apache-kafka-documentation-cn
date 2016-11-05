@@ -157,7 +157,7 @@ Topic级别的配置和默认值在[下面](http://kafka.apache.org/documentatio
 
 ```
 
-Overrides can also be changed or set later using the alter topic command. This example updates the max message size for _my-topic_:
+覆盖也可以稍后通过命令进行修改和设置。下面例子更新了topic _my-topic_的消息最大值:
 
 ```
  > bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic my-topic
