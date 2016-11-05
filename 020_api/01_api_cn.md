@@ -163,7 +163,7 @@ class kafka.javaapi.consumer.SimpleConsumer {
 
 对于大多数应用，高层的消费者Api已经足够优秀了。一些应用需求的特性还没有暴露给高层消费者（比如在重启消费者时设置初始的offset）。它们可以取代我们的底层SimpleConsumer Api。这个逻辑可能更复杂一点，你可以参照这个[示例](https://cwiki.apache.org/confluence/display/KAFKA/0.8.0+SimpleConsumer+Example "Kafka 0.8 SimpleConsumer example")。
 
-#### [2.2.3 新消费者API New Consumer API](#newconsumerapi)<a id="newconsumerapi"></a>
+#### [2.2.3 新消费者API](#newconsumerapi)<a id="newconsumerapi"></a>
 
 这个新的统一的消费者API移除了从0.8开始而来的上层和底层消费者API的差异。你可以通过添加如下示例Maven坐标来添加客户端jar依赖来使用此客户端。
 
