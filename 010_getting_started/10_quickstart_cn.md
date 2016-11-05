@@ -128,8 +128,7 @@ config/server-2.properties:
 
 Okay but now that we have a cluster how can we know which broker is doing what? To see that run the "describe topics" command:
 
-现在我们启动了一个集群，我们如何知道每个broker具体的工作呢？
-为了回答这个问题，可以运行`describe topics`命令：
+现在我们启动了一个集群，我们如何知道每个broker具体做了什么是呢？为了回答这个问题，可以运行`describe topics`命令：
 
 ```bash
 > bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic my-replicated-topic
