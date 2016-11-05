@@ -250,11 +250,11 @@ Below is the configuration of the Java producer:
 
 For those interested in the legacy Scala producer configs, information can be found [**here**](http://kafka.apache.org/082/documentation.html#producerconfigs).
 
-### [3.3 Consumer Configs](#consumerconfigs)<a id="consumerconfigs"></a>
+### [3.3 消费者配置](#consumerconfigs)<a id="consumerconfigs"></a>
 
 We introduce both the old 0.8 consumer configs and the new consumer configs respectively below.
 
-#### [3.3.1 Old Consumer Configs](#oldconsumerconfigs)<a id="oldconsumerconfigs"></a>
+#### [3.3.1 老的消费者配置](#oldconsumerconfigs)<a id="oldconsumerconfigs"></a>
 
 The essential old consumer configurations are the following:
 
