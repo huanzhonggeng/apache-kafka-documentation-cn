@@ -1,4 +1,4 @@
-## [4. Design](#design)<a id="design"></a>
+## [4. 设计](#design)<a id="design"></a>
 
 ### [4.1 Motivation](#majordesignelements)<a id="majordesignelements"></a>
 
