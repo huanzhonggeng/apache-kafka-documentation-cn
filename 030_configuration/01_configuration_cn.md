@@ -165,7 +165,7 @@ Topic级别的配置和默认值在[下面](http://kafka.apache.org/documentatio
 
 ```
 
-To remove an override you can do
+要删除一个覆盖可以通过下面命令实现
 
 ```
  > bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic my-topic
