@@ -147,9 +147,9 @@ Topic级别的配置和默认值在[下面](http://kafka.apache.org/documentatio
 | ssl.endpoint.identification.algorithm | The endpoint identification algorithm to validate server hostname using server certificate. | string | null |  | low |
 | zookeeper.sync.time.ms | How far a ZK follower can be behind a ZK leader | int | 2000 |  | low |
 
-More details about broker configuration can be found in the scala class `kafka.server.KafkaConfig`.
+更多broker的详细配置参见`kafka.server.KafkaConfig`
 
-[**Topic-level configuration**](http://kafka.apache.org/documentation.html#topic-config) Configurations pertinent to topics have both a global default as well an optional per-topic override. If no per-topic configuration is given the global default is used. The override can be set at topic creation time by giving one or more `--config` options. This example creates a topic named _my-topic_ with a custom max message size and flush rate:
+[**Topic级别的配置**](http://kafka.apache.org/documentation.html#topic-config) Configurations pertinent to topics have both a global default as well an optional per-topic override. If no per-topic configuration is given the global default is used. The override can be set at topic creation time by giving one or more `--config` options. This example creates a topic named _my-topic_ with a custom max message size and flush rate:
 
 ```
  > bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic my-topic --partitions 1
