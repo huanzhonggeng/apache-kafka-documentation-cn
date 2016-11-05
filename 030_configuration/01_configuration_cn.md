@@ -149,7 +149,7 @@ Topic级别的配置和默认值在[下面](http://kafka.apache.org/documentatio
 
 更多broker的详细配置参见`kafka.server.KafkaConfig`
 
-[**Topic级别的配置**](http://kafka.apache.org/documentation.html#topic-config) Configurations pertinent to topics have both a global default as well an optional per-topic override. If no per-topic configuration is given the global default is used. The override can be set at topic creation time by giving one or more `--config` options. This example creates a topic named _my-topic_ with a custom max message size and flush rate:
+[**Topic级别的配置**](http://kafka.apache.org/documentation.html#topic-config) Topic相关的配置默认全局配置，每个topic的可选配置可以覆盖全局默认配置。如果topic没有设置特殊的配置，则全局配置生效。覆盖可以在topic创建时设置一个或者多个配置`--config`。 下面的例子创建了一个topic _my-topic_ 同时设置了消息最大自和刷新频率:
 
 ```
  > bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic my-topic --partitions 1
