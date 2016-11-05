@@ -32,14 +32,14 @@
 
 **注意：**因为每个消息新时间戳字段的引入，生产者在发送小包消息可能出现因为负载上升造成的吞吐量的下降。同理，现在复制过程每个消息也要多传输8个比特。如果你的集群即将达到网络容量的瓶颈，这可能造成网卡打爆并因为超载引起失败和性能问题。
 
-**注意：**如果你在生产者启动了消息压缩机制，你可能发现生产者吞吐量下降和/或中间件消息压缩比例的下降。在接受压缩过的消息时，0.10.0的中间避免重新压缩信息，这样原意是为了降低延迟提供吞吐量。但是在某些场景下，这可能降低生产者批处理数量，并引起吞吐量上更差的表现。如果这种情况发生了，用户可以调节生产者的linger.ms和batch.size参数来获得更好的吞吐量。另外生产者在使用snappy进行消息压缩时它用来消息压缩的buffer相比中间件的要小，这可能给磁盘上的消息的压缩率带来一个负面影响，我们计划将在后续的版本中将这个参数修改为可配置的。
+**注意：**如果你在生产者启动了消息压缩机制，你可能发现生产者吞吐量下降和/或中间件消息压缩比例的下降。在接受压缩过的消息时，0.10.0的中间避免重新压缩信息，这样原意是为了降低延迟提供吞吐量。但是在某些场景下，这可能降低生产者批处理数量，并引起吞吐量上更差的表现。如果这种情况发生了，用户可以调节生产者的`linger.ms`和`batch.size`参数来获得更好的吞吐量。另外生产者在使用snappy进行消息压缩时它用来消息压缩的buffer相比中间件的要小，这可能给磁盘上的消息的压缩率带来一个负面影响，我们计划将在后续的版本中将这个参数修改为可配置的。
 
 ##### [0.10.0.0潜在的不兼容修改](#upgrade_10_breaking)<a id="upgrade_10_breaking"></a>
 
 * 从0.10.0.0开始，Kafka消息格式的版本号将用Kafka版本号表示。例如，消息格式版本号0.9.0表示最高Kafka 0.9.0支持的消息格式。
 * 引入了0.10.0版本消息格式并作为默认配置。它引入了一个时间戳字段并在压缩消息中使用相对偏移量。
 * 引入了ProduceRequest/Response v2并用作0.10.0消息格式的默认支持。
-* 引入了FetchRequest\/Response v2并用作0.10.0消息格式的默认支持。
+* 引入了FetchRequest/Response v2并用作0.10.0消息格式的默认支持。
 * 接口MessageFormatter从`def writeTo(key: Array[Byte], value: Array[Byte], output: PrintStream)`变更为`def writeTo(consumerRecord: ConsumerRecord[Array[Byte], Array[Byte]], output: PrintStream)`
 * 接口MessageReader从`def readMessage(): KeyedMessage[Array[Byte], Array[Byte]]`变更为`def readMessage(): ProducerRecord[Array[Byte], Array[Byte]]`
 * MessageFormatter的包从`kafka.tools`变更为`kafka.common`
