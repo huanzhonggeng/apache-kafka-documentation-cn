@@ -176,7 +176,7 @@ my test message 2
 
 ```
 
-先在让我们测试一下集群容错。Broker 1正在作为leader所以我们杀掉它：
+现在让我们测试一下集群容错。Broker 1正在作为leader所以我们杀掉它：
 
 ```bash
 > ps | grep server-1.properties
