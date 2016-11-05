@@ -205,7 +205,7 @@ my test message 2
 
 ```
 
-#### [Step 7: 使用Kafka Connect进行数据导入导出 Use Kafka Connect to import/export data](#quickstart_kafkaconnect)<a id="quickstart_kafkaconnect"></a>
+#### [Step 7: 使用Kafka Connect进行数据导入导出](#quickstart_kafkaconnect)<a id="quickstart_kafkaconnect"></a>
 
 从终端写入数据，数据也写回终端是默认的。但是你可能希望从一些其它的数据源或者导出Kafka的数据到其它的系统。相比其它系统需要自己编写集成代码，你可以直接使用Kafka的Connect直接导入或者导出数据。Kafka Connect是Kafka自带的用于数据导入和导出的工具。它是一个扩展的可运行连接器(runs_connectors_)工具，可实现自定义的逻辑来实现与外部系统的集成交互。在这个快速入门中我们将介绍如何通过一个简单的从文本导入数据、导出数据到文本的连接器来调用Kafka Connect。首先我们从创建一些测试的基础数据开始：
 
