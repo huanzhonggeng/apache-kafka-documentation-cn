@@ -39,15 +39,15 @@ Topic级别的配置和默认值在[下面](http://kafka.apache.org/documentatio
 | log.retention.minutes | The number of minutes to keep a log file before deleting it (in minutes), secondary to log.retention.ms property. If not set, the value in log.retention.hours is used<br/>在删除之前日志文件保存的最长分钟数(分钟计)，相比log.retention.ms第二优先。如果没有设置log.retention.hours中的值将被使用 | int | null |  | high |
 | log.retention.ms | The number of milliseconds to keep a log file before deleting it (in milliseconds), If not set, the value in log.retention.minutes is used<br/>在删除之前日志文件保存的最长微秒数(微秒计),如果没有设置log.retention.minutes中的值将被使用 | long | null |  | high |
 | log.roll.hours | The maximum time before a new log segment is rolled out (in hours), secondary to log.roll.ms property<br/>一个新日志段被推出前最长的时间(小时计)，相比log.roll.ms第二优先| int | 168 | [1,...] | high |
-| log.roll.jitter.hours | The maximum jitter to subtract from logRollTimeMillis (in hours), secondary to log.roll.jitter.ms property | int | 0 | [0,...] | high |
+| log.roll.jitter.hours | The maximum jitter to subtract from logRollTimeMillis (in hours), secondary to log.roll.jitter.ms property <br/>| int | 0 | [0,...] | high |
 | log.roll.jitter.ms | The maximum jitter to subtract from logRollTimeMillis (in milliseconds). If not set, the value in log.roll.jitter.hours is used | long | null |  | high |
 | log.roll.ms | The maximum time before a new log segment is rolled out \(in milliseconds\). If not set, the value in log.roll.hours is used | long | null |  | high |
 | log.segment.bytes | The maximum size of a single log file | int | 1073741824 | \[14,...\] | high |
-| log.segment.delete.delay.ms | The amount of time to wait before deleting a file from the filesystem | long | 60000 | \[0,...\] | high |
-| message.max.bytes | The maximum size of message that the server can receive | int | 1000012 | \[0,...\] | high |
+| log.segment.delete.delay.ms | The amount of time to wait before deleting a file from the filesystem <br/>日志文件被删除的等待时间| long | 60000 | \[0,...\] | high |
+| message.max.bytes | The maximum size of message that the server can receive 服务器接收的消息最大值| int | 1000012 | \[0,...\] | high |
 | min.insync.replicas | define the minimum number of replicas in ISR needed to satisfy a produce request with acks=all \(or -1\) | int | 1 | \[1,...\] | high |
-| num.io.threads | The number of io threads that the server uses for carrying out network requests | int | 8 | \[1,...\] | high |
-| num.network.threads | the number of network threads that the server uses for handling network requests | int | 3 | \[1,...\] | high |
+| num.io.threads | The number of io threads that the server uses for carrying out network requests 服务器用语搬运网络数据请求的线程数| int | 8 | \[1,...\] | high |
+| num.network.threads | the number of network threads that the server uses for handling network requests 服务器用于处理网络请求的线程数| int | 3 | \[1,...\] | high |
 | num.recovery.threads.per.data.dir | The number of threads per data directory to be used for log recovery at startup and flushing at shutdown | int | 1 | \[1,...\] | high |
 | num.replica.fetchers | Number of fetcher threads used to replicate messages from a source broker. Increasing this value can increase the degree of I\/O parallelism in the follower broker. | int | 1 |  | high |
 | offset.metadata.max.bytes | The maximum size for a metadata entry associated with an offset commit | int | 4096 |  | high |
