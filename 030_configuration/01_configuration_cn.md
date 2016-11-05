@@ -300,7 +300,7 @@ The essential old consumer configurations are the following:
 
 More details about consumer configuration can be found in the scala class`kafka.consumer.ConsumerConfig`.
 
-#### [3.3.2 New Consumer Configs](#newconsumerconfigs)<a id="newconsumerconfigs"></a>
+#### [3.3.2 新的消费者配置](#newconsumerconfigs)<a id="newconsumerconfigs"></a>
 
 Since 0.9.0.0 we have been working on a replacement for our existing simple and high-level consumers. The code is considered beta quality. Below is the configuration for the new consumer:
 
