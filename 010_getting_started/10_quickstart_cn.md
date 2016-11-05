@@ -222,7 +222,7 @@ my test message 2
 
 ```
 
-上述简单的配置文件已经被包含在Kafka的发行包中，它们将使用默认的之前我们启动的本地集群配置创建两个connector：第一个作为源connector从一个文件中读取每行数据然后将他们发送Kafka的topic，第二个是一个输出(sink)connector从Kafka的topic读取消息，然后将它们输出成输出文件的一行行的数据。在启动的过程你讲看到一些日志消息，包括一些提示connector正在被实例化的信息。一旦Kafka Connect进程启动以后，源connector应该开始从`test.txt`中读取数据行，并将他们发送到topic `connect-test`上，然后输出connector将会开始从topic读取消息然后把它们写入到`test.sink.txt`中。
+上述简单的配置文件已经被包含在Kafka的发行包中，它们将使用默认的之前我们启动的本地集群配置创建两个connector：第一个作为源connector从一个文件中读取每行数据然后将他们发送Kafka的topic，第二个是一个输出目标connector从Kafka的topic读取消息，然后将它们输出成输出文件的一行行的数据。在启动的过程你将看到一些日志消息，包括一些提示connector正在被实例化的信息。一旦Kafka Connect进程启动以后，源connector应该开始从`test.txt`中读取数据行，并将他们发送到topic `connect-test`上，然后输出connector将会开始从topic读取消息然后把它们写入到`test.sink.txt`中。
 
 我们可以查看输出文件来验证通过整个管线投递的数据：
 
