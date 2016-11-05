@@ -137,7 +137,7 @@ Topic:my-replicated-topic	PartitionCount:1	ReplicationFactor:3	Configs:
 
 解释一下输出的内容。第一行给出了所有partition的一个总结，每行给出了一个partition的信息。因为我们这个topic只有一个partition所以只有一行信息。
 
-* “leader”负责给定partition的所有读和写请求的响应。每个节点都会是从所有partition集合随机选定的一个子集的“leader”
+* “leader”负责给定partition的所有读和写请求的响应。每个节点都会是从所有partition集合随机选定的一个子集的“leader”。
 *  “replicas”是一个节点列表，包含所有复制了此partition log的节点，不管这个节点是否为leader也不管这个节点当前是否存活。
 * “isr”是当前处于同步状态的副本。这是“replicas”列表的一个子集表示当前处于存活状态并且与leader一致的节点。
 
