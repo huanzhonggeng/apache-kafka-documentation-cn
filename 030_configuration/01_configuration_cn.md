@@ -55,8 +55,8 @@ Topic级别的配置和默认值在[下面](http://kafka.apache.org/documentatio
 | offsets.commit.timeout.ms | Offset commit will be delayed until all replicas for the offsets topic receive the commit or this timeout is reached. This is similar to the producer request timeout. <br/>主题消息被所有的副本提交所允许的最大值| int | 5000 | \[1,...\] | high |
 | offsets.load.buffer.size | Batch size for reading from the offsets segments when loading offsets into the cache. <br/>加载偏移量片段到缓存的批次大小| int | 5242880 | \[1,...\] | high |
 | offsets.retention.check.interval.ms | Frequency at which to check for stale offsets <br/>检查偏移量状态一致性的间隔时间| long | 600000 | \[1,...\] | high |
-| offsets.retention.minutes | Log retention window in minutes for offsets topic <br/>| int | 1440 | \[1,...\] | high |
-| offsets.topic.compression.codec | Compression codec for the offsets topic - compression may be used to achieve "atomic" commits | int | 0 |  | high |
+| offsets.retention.minutes | Log retention window in minutes for offsets topic <br/>偏移主题在日志中保留的时间，单位分钟| int | 1440 | \[1,...\] | high |
+| offsets.topic.compression.codec | Compression codec for the offsets topic - compression may be used to achieve "atomic" commits 偏移主题压缩编码| int | 0 |  | high |
 | offsets.topic.num.partitions | The number of partitions for the offset commit topic \(should not change after deployment\) | int | 50 | \[1,...\] | high |
 | offsets.topic.replication.factor | The replication factor for the offsets topic \(set higher to ensure availability\). To ensure that the effective replication factor of the offsets topic is the configured value, the number of alive brokers has to be at least the replication factor at the time of the first request for the offsets topic. If not, either the offsets topic creation will fail or it will get a replication factor of min\(alive brokers, configured replication factor\) | short | 3 | \[1,...\] | high |
 | offsets.topic.segment.bytes | The offsets topic segment bytes should be kept relatively small in order to facilitate faster log compaction and cache loads | int | 104857600 | \[1,...\] | high |
