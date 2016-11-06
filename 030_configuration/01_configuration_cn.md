@@ -50,12 +50,12 @@ Topic级别的配置和默认值在[下面](http://kafka.apache.org/documentatio
 | num.network.threads | the number of network threads that the server uses for handling network requests <br/>服务器用于处理网络请求的线程数| int | 3 | \[1,...\] | high |
 | num.recovery.threads.per.data.dir | The number of threads per data directory to be used for log recovery at startup and flushing at shutdown <br/>系统启动和系统关闭前每个目录用于恢复数据的线程数| int | 1 | \[1,...\] | high |
 | num.replica.fetchers | Number of fetcher threads used to replicate messages from a source broker. Increasing this value can increase the degree of I\/O parallelism in the follower broker. <br/>从源broker上拉取副本消息的线程数，增加该值可以增加fllower broker上IO并行能力。| int | 1 |  | high |
-| offset.metadata.max.bytes | The maximum size for a metadata entry associated with an offset commit | int | 4096 |  | high |
-| offsets.commit.required.acks | The required acks before the commit can be accepted. In general, the default \(-1\) should not be overridden | short | -1 |  | high |
-| offsets.commit.timeout.ms | Offset commit will be delayed until all replicas for the offsets topic receive the commit or this timeout is reached. This is similar to the producer request timeout. | int | 5000 | \[1,...\] | high |
-| offsets.load.buffer.size | Batch size for reading from the offsets segments when loading offsets into the cache. | int | 5242880 | \[1,...\] | high |
-| offsets.retention.check.interval.ms | Frequency at which to check for stale offsets | long | 600000 | \[1,...\] | high |
-| offsets.retention.minutes | Log retention window in minutes for offsets topic | int | 1440 | \[1,...\] | high |
+| offset.metadata.max.bytes | The maximum size for a metadata entry associated with an offset commit  <br/>绑定到偏移量提交时元数据的最大值。| int | 4096 |  | high |
+| offsets.commit.required.acks | The required acks before the commit can be accepted. In general, the default \(-1\) should not be overridden <br/>提交接收时的应答类型，默认值（-1）尽量不要覆盖。| short | -1 |  | high |
+| offsets.commit.timeout.ms | Offset commit will be delayed until all replicas for the offsets topic receive the commit or this timeout is reached. This is similar to the producer request timeout. <br/>主题消息被所有的副本提交所允许的最大值| int | 5000 | \[1,...\] | high |
+| offsets.load.buffer.size | Batch size for reading from the offsets segments when loading offsets into the cache. <br/>加载偏移量片段到缓存的批次大小| int | 5242880 | \[1,...\] | high |
+| offsets.retention.check.interval.ms | Frequency at which to check for stale offsets <br/>检查偏移量状态一致性的间隔时间| long | 600000 | \[1,...\] | high |
+| offsets.retention.minutes | Log retention window in minutes for offsets topic <br/>| int | 1440 | \[1,...\] | high |
 | offsets.topic.compression.codec | Compression codec for the offsets topic - compression may be used to achieve "atomic" commits | int | 0 |  | high |
 | offsets.topic.num.partitions | The number of partitions for the offset commit topic \(should not change after deployment\) | int | 50 | \[1,...\] | high |
 | offsets.topic.replication.factor | The replication factor for the offsets topic \(set higher to ensure availability\). To ensure that the effective replication factor of the offsets topic is the configured value, the number of alive brokers has to be at least the replication factor at the time of the first request for the offsets topic. If not, either the offsets topic creation will fail or it will get a replication factor of min\(alive brokers, configured replication factor\) | short | 3 | \[1,...\] | high |
